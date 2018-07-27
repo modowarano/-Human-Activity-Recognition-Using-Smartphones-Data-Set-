@@ -1,5 +1,6 @@
 ##Changing the working directory to the data folder "UCI HAR Dataset"
-setwd("C:/Users/konan/Desktop/Coursera - Data Science/UCI HAR Dataset")
+path <- getwd()
+setwd(paste(path, "UCI HAR Dataset", sep = "/"))
 
 ##Reading columns' names from the file "feature.txt"
 columns <- read.table("features.txt", colClasses = "character")
