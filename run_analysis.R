@@ -36,7 +36,7 @@ dataset$Activity <- actlabels[dataset$Activity]
 chosen_columns <- grep("mean|std", names(dataset), value = TRUE)
 dataset <- dataset[ ,c("Subject","Activity",chosen_columns)]
 
-##Writing the last dataset
+##Writing the last dataset (Question 5)
 library(magrittr)
 library(dplyr)
 last_dataset <- dataset%>% group_by(Subject,Activity)%>% summarise_all(mean)
